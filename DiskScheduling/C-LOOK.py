@@ -7,7 +7,7 @@ for r in requests:
     if r < head:
         left.append(r)
     else:
-        right.append(r)       
+        right.append(r)
 left.sort()
 right.sort()
 total = 0
@@ -19,6 +19,7 @@ for r in right:
     print(r, end=" ")
     total += abs(r - current)
     current = r
+
 # Jump directly to smallest on left (if any)
 if len(left) > 0:
     total += abs(current - left[0])
